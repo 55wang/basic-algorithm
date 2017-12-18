@@ -8,16 +8,12 @@ def bubble_sort(input_list):
         swap_flag = False
         for j in range(0, len(input_list)-i, 1):
             if input_list[j] > input_list[j+1]:
-                input_list[j], input_list[j+1] = swap(input_list[j], input_list[j+1])
+                input_list[j], input_list[j + 1] = input_list[j + 1], input_list[j]
                 swap_flag = True
 
         if not swap_flag:
             break
     return input_list
-
-
-def swap(left, right):
-    return right, left
 
 
 if __name__ == '__main__':

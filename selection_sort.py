@@ -11,13 +11,9 @@ def selection_sort(input_list):
             if input_list[j] < input_list[min_index]:
                 min_index = j
 
-        input_list[min_index], input_list[i] = swap(input_list[min_index], input_list[i])
+        input_list[min_index], input_list[i] = input_list[i], input_list[min_index]
 
     return input_list
-
-
-def swap(left, right):
-    return right, left
 
 
 if __name__ == '__main__':
